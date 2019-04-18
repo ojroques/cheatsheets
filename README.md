@@ -1,9 +1,9 @@
 # Cheatsheets
 
-This repository contains cheatseets I've created over the years for:
+This repository contains cheatsheets for:
 * Vim
 * tmux
 * Docker
 * Regular expressions
-* Archlinux (installation instructions)
-* Linux commands (with the LaTeX source)
+* ArchLinux (installation instructions)
+* Linux commands (with its LaTeX source)
