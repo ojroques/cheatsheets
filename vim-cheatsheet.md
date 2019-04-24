@@ -27,7 +27,6 @@ A list of commands for vim and some vim plugins.
     * [vim-commentary](#vim-commentary)
     * [ctrlp](#ctrlp)
     * [fzf](#fzf)
-    * [tabular](#tabular)
     * [fugitive](#fugitive)
     * [vim-surround](#vim-surround)
     * [coc.nvim](#cocnvim)
@@ -262,12 +261,6 @@ A list of commands for vim and some vim plugins.
 | `<C-v>`                 | N    | Open selected entry in a vertical split   |
 | `Tab`                   | N    | Mark/Unmark files                         |
 | `help fzf-vim-commands` | Ex   | Show all available commands               |
-
-#### tabular
-
-| Command          | Mode | Description             |
-| ---------------- | ---- | ----------------------- |
-| `Tab /{pattern}` | Ex   | Align text to `pattern` |
 
 #### fugitive
 
