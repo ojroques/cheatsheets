@@ -29,7 +29,6 @@ A list of commands for vim and some vim plugins.
     * [fzf](#fzf)
     * [fugitive](#fugitive)
     * [vim-surround](#vim-surround)
-    * [coc.nvim](#cocnvim)
     * [vimtex](#vimtex)
 
 
@@ -301,20 +300,6 @@ A list of commands for vim and some vim plugins.
 | `ds`    | N    | Delete surroundings               |
 | `S`     | V    | Wrap the selection                |
 | `<C-s>` | I    | Insert the specified surroundings |
-
-#### coc.nvim
-
-| Command        | Mode | Description                                  |
-| -------------- | ---- | -------------------------------------------- |
-| `CocDisable`   | Ex   | Diable coc.nvim                              |
-| `CocEnable`    | Ex   | Enable coc.nvim                              |
-| `CocConfig`    | Ex   | Edit the config file `coc-settings.json`     |
-| `CocInstall`   | Ex   | Install an extension                         |
-| `CocUninstall` | Ex   | Uninstall an extension                       |
-| `CocUpdate`    | Ex   | Update extensions                            |
-| `CocCommand`   | Ex   | List all available commands                  |
-| `CocList`      | Ex   | Open list (`CocList lists` to see all lists) |
-| `CocOpenLog`   | Ex   | Open the log file                            |
 
 #### vimtex
 
