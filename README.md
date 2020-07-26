@@ -7,3 +7,4 @@ This repository contains cheatsheets for:
 * Regular expressions
 * ArchLinux (installation instructions)
 * Linux commands (with its LaTeX source)
+* DigitalOcean tutorials
