@@ -209,12 +209,12 @@ A list of commands for Vim and Neovim.
 
 ## Files
 
-| Command                      | Mode | Description                     |
-| ---------------------------- | ---- | ------------------------------- |
-| `w`                          | Ex   | Save file                       |
-| `w !sudo tee % > /dev/null/` | Ex   | Save file as root (Neovim only) |
-| `e`                          | Ex   | Edit file                       |
-| `q`                          | Ex   | Exit vim                        |
+| Command                      | Mode | Description                  |
+| ---------------------------- | ---- | ---------------------------- |
+| `w`                          | Ex   | Save file                    |
+| `w !sudo tee % > /dev/null/` | Ex   | Save file as root (Vim only) |
+| `e`                          | Ex   | Edit file                    |
+| `q`                          | Ex   | Exit vim                     |
 
 
 ## Code compilation

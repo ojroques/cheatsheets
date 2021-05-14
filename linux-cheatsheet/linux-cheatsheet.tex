@@ -1,0 +1,176 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, landscape, margin=40pt]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{microtype}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize, 1]{label=\textbullet}
+\setlist[itemize, 2]{label={--}}
+
+\newcommand{\command}[2]{\textsf{\textbf{#1}} \dotfill{} #2}
+
+\title{Linux cheat sheet}
+\author{Olivier \bsc{Roques}}
+\date{}
+
+\pagenumbering{gobble}
+
+\begin{document}
+\maketitle
+\begin{multicols*}{2}
+
+
+\section{Bash shortcuts}
+
+\command{CTRL+SHIFT+T}{open a terminal in a new tab}\\
+\command{CTRL+SHIFT+PgUp}{scroll up}\\
+\command{CTRL+SHIFT+PgDown}{scroll down}\\
+\command{CTRL+R}{search the history backwards}\\
+\command{CTRL+A}{go to the start of the command line}\\
+\command{CTRL+E}{go to the end of the command line}\\
+\command{CTRL+U}{delete from cursor to the start of the command line}\\
+\command{CTRL+K}{delete from cursor to the end of the command line}\\
+\command{CTRL+W}{delete the word before the cursor}\\
+\command{CTRL+Y}{paste text that was cut after the cursor}\\
+\command{CTRL+Z}{suspend the current foreground process running}\\
+\command{CTRL+C}{kill the current foreground process running}\\
+\command{CTRL+L}{clear the screen}\\
+\command{CTRL+D}{close the bash shell}
+
+
+\section{Bash commands}
+
+\subsection{Basic commands}
+
+\command{date}{print or set the system date and time}\\
+\command{pwd}{print name of current/working directory}\\
+\command{cd}{change the current directory}\\
+\command{echo}{display a line of text}\\
+\command{man}{format and display the on-line manual pages}\\
+\command{history}{display previous commands}\\
+\command{env}{display environment variables}\\
+\command{alias}{define or display aliases}\\
+\command{exit}{cause the shell to exit}
+
+
+\subsection{File management}
+
+\command{ls}{list directory contents}\\
+\command{mkdir}{make directories}\\
+\command{touch}{create file or change file timestamps}\\
+\command{cp}{copy files and directories}\\
+\command{mv}{move or rename files}\\
+\command{rm}{remove files or directories}\\
+\command{file}{determine file type}\\
+\command{ln}{make links between files}\\
+\command{find}{search for files in a directory hierarchy}\\
+\command{du}{estimate file space usage}\\
+\command{tar}{store, list or extract files in an archive}\\
+\command{gzip}{compress or expand files}
+
+\subsection{File operations}
+
+\command{cat}{concatenate files and print on the standard output}\\
+\command{less}{display output one screen at a time}\\
+\command{head}{output the first part of files}\\
+\command{tail}{output the last part of files}\\
+\command{grep}{print lines matching a pattern}\\
+\command{diff}{compare files line by line}\\
+\command{wc}{print newline, word, and byte counts for each file}\\
+\command{sort}{sort lines of text files}\\
+\command{uniq}{report or omit repeated lines}\\
+\command{cut}{remove sections from each line of files}
+
+\subsection{User management}
+
+\command{sudo}{execute a command as another user}\\
+\command{chmod}{change access permissions}\\
+\command{chown}{change file owner and group}\\
+\command{umask}{set default permissions}\\
+\command{useradd}{create a new user or update default new user information}\\
+\command{userdel}{delete a user account and related files}\\
+\command{passwd}{update user's authentication}
+
+\subsection{Process management}
+
+\command{w}{show who is logged on and what they are doing}\\
+\command{ps}{report a snapshot of the current processes}\\
+\command{top}{list processes running on the system}\\
+\command{kill}{terminate a process}\\
+\command{time}{time a simple command or give resource usage}\\
+\command{jobs}{list active jobs}\\
+\command{bg}{run jobs in the background}\\
+\command{fg}{run jobs in the foreground}\\
+\command{sleep}{delay for a specified amount of time}\\
+\command{nohup}{run a command immune to hangups}\\
+\command{at}{execute commands at a later time}\\
+\command{crontab}{schedule periodic background work}\\
+\command{df}{report file system disk space usage}\\
+\command{halt}{reboot or stop the system}
+
+\subsection{Network management}
+
+\command{ping}{send an ICMP request to network hosts}\\
+\command{ssh}{open SSH client}\\
+\command{scp}{secure remote file copy}\\
+\command{ftp}{open File Transfer Protocol client}\\
+\command{whois}{query a whois or nicname database}\\
+\command{ifconfig}{configure a network interface}\\
+\command{netstat}{print network informations}\\
+\command{traceroute}{print the route packets trace to network host}
+
+
+\section{Programming}
+
+\command{gcc}{C and C++ compiler}\\
+\command{gcc -Wall in.c -o out}{compile (a C file) and create an executable}\\
+\command{javac}{compile (a Java file) and create a .class file}\\
+\command{java}{execute a .class file}\\
+\command{make}{execute a Makefile}
+
+
+\section{VIM commands}
+
+\subsection{Normal mode}
+
+\command{0}{move cursor to the beginning of current line}\\
+\command{\$}{move cursor to the end of current line}\\
+\command{w}{move forward by one word}\\
+\command{x}{delete characters after the cursor}\\
+\command{dd}{delete the current line}\\
+\command{dw}{delete word from cursor on}\\
+\command{yy}{copy the current line}\\
+\command{p}{paste the copied text before the cursor}\\
+\command{u}{undo your last action}\\
+\command{CTRL+R}{redo your last action}\\
+\command{/}{find a word}
+
+\subsection{Insertion mode}
+
+\command{i}{insert text before the current cursor position}\\
+\command{a}{append text following current cursor position}\\
+\command{A}{append text to the end of current line}\\
+\command{o}{begin a new line below the cursor and insert text}\\
+\command{O}{begin a new line above the cursor and insert text}\\
+\command{Echap}{return to normal mode}
+
+\subsection{Command mode}
+
+\command{:w}{write file}\\
+\command{:q}{quit the editor}\\
+\command{:wq}{write file and quit the editor}\\
+\command{ZZ}{write file and quit the editor}
+
+
+\end{multicols*}
+\end{document}
