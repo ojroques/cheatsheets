@@ -29,7 +29,8 @@ View system-wide information about Docker;
 docker info
 ```
 
-Clean up any resources that are dangling (not associated with a container) in addition to any stopped containers and all unused images (`-a`):
+Clean up any resources that are dangling (not associated with a container) in
+addition to any stopped containers and all unused images (`-a`):
 ```sh
 docker system prune -a
 ```
@@ -83,7 +84,8 @@ Run an image:
 docker run <image>
 ```
 
-Run an image (Ubuntu here) in a container named *myname* with access to an interactive (`-i`) shell (`-t`) that removes itself when stopped (`--rm`):
+Run an image (Ubuntu here) in a container named *myname* with access to an
+interactive (`-i`) shell (`-t`) that removes itself when stopped (`--rm`):
 ```sh
 docker run -it --rm --name myname ubuntu
 ```
