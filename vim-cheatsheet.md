@@ -1,6 +1,6 @@
 # VIM cheatsheet
 
-A list of commands for vim and some vim plugins.
+A list of commands for Vim and Neovim.
 
 #### Notation
 * **N**      : Normal mode
@@ -21,15 +21,9 @@ A list of commands for vim and some vim plugins.
 * [Macros](#macros)
 * [Visual Mode](#visual-mode)
 * [Command-Line Mode](#command-line-mode)
+* [Buffers, Tabs and Windows](#buffers-tabs-and-windows)
 * [Files](#files)
 * [Code compilation](#code-compilation)
-* [Plugins](#plugins)
-    * [vim-commentary](#vim-commentary)
-    * [ctrlp](#ctrlp)
-    * [fzf](#fzf)
-    * [fugitive](#fugitive)
-    * [vim-surround](#vim-surround)
-    * [vimtex](#vimtex)
 
 
 ## Navigation
@@ -187,31 +181,40 @@ A list of commands for vim and some vim plugins.
 | `<C-r><C-w>` | Ex   | Insert the current word into the command prompt |
 | `!<cmd>`     | Ex   | Run a shell command                             |
 | `shell`      | Ex   | Start an interactive shell session              |
-| `terminal`   | Ex   | Create a terminal buffer (neovim)               |
+| `terminal`   | Ex   | Create a terminal buffer                        |
 | `set spell`  | Ex   | Enable spell checker                            |
 | `z=`         | Ex   | Suggest corrections for current word            |
 | `noh`        | Ex   | Remove highlights                               |
 
 
+## Buffers, Tabs and Windows
+
+| Command        | Mode | Description                        |
+| -------------- | ---- | ---------------------------------- |
+| `ls`           | Ex   | Print the buffer list              |
+| `bn`           | Ex   | Switch to next buffer              |
+| `bp`           | Ex   | Switch to previous buffer          |
+| `bd`           | Ex   | Delete buffer                      |
+| `<C-w>s`       | N    | Split  current window horizontally |
+| `<C-w>v`       | N    | Split current window vertically    |
+| `<C-w>h/j/k/l` | N    | Move focus                         |
+| `<C-w>H/J/K/L` | N    | Move windows                       |
+| `<C-w>w`       | N    | Cycle between open windows         |
+| `<C-w>c`       | N    | Close active window                |
+| `<C-w>o`       | N    | Close all windows except current   |
+| `tabnew`       | Ex   | Create a new tab                   |
+| `tabclose`     | Ex   | Close a tab                        |
+| `gt`           | N    | Switch to next tab                 |
+
+
 ## Files
 
-| Command                      | Mode | Description                        |
-| ---------------------------- | ---- | ---------------------------------- |
-| `w`                          | Ex   | Write file                         |
-| `e`                          | Ex   | Edit file                          |
-| `q`                          | Ex   | Exit vim                           |
-| `ls`                         | Ex   | Print the buffer list              |
-| `bn`                         | Ex   | Switch to next buffer              |
-| `bp`                         | Ex   | Switch to previous buffer          |
-| `bd`                         | Ex   | Delete buffer                      |
-| `<C-w>s`                     | N    | Split  current window horizontally |
-| `<C-w>v`                     | N    | Split current window vertically    |
-| `<C-w>h/j/k/l`               | N    | Move focus                         |
-| `<C-w>H/J/K/L`               | N    | Move windows                       |
-| `<C-w>w`                     | N    | Cycle between open windows         |
-| `<C-w>c`                     | N    | Close active window                |
-| `<C-w>o`                     | N    | Close all other windows            |
-| `w !sudo tee % > /dev/null/` | Ex   | Save file as root                  |
+| Command                      | Mode | Description                     |
+| ---------------------------- | ---- | ------------------------------- |
+| `w`                          | Ex   | Save file                       |
+| `w !sudo tee % > /dev/null/` | Ex   | Save file as root (Neovim only) |
+| `e`                          | Ex   | Edit file                       |
+| `q`                          | Ex   | Exit vim                        |
 
 
 ## Code compilation
@@ -226,90 +229,3 @@ A list of commands for vim and some vim plugins.
 | `clast`             | Ex   | Jump to quickfix last item            |
 | `cn`                | Ex   | Jump to next quickfix item            |
 | `cp`                | Ex   | Jump to previous quickfix item        |
-
-
-## Plugins
-
-#### vim-commentary
-
-| Command | Mode | Description              |
-| ------- | ---- | ------------------------ |
-| `gc`    | N    | Comment/Uncomment        |
-| `gcc`   | N    | Comment/Uncomment a line |
-
-#### ctrlp
-
-| Command         | Mode | Description                                |
-| --------------- | ---- | ------------------------------------------ |
-| `<C-p>`         | N    | Invoke *ctrlp* in find file mode           |
-| `<F5>`          | N    | Purge cache                                |
-| `<C-j>`/`<C-k>` | N    | Navigate the result list                   |
-| `<C-f>`/`<C-b>` | N    | Cycle between modes                        |
-| `<C-x>`         | N    | Open selected entry in a horizontal split  |
-| `<C-v>`         | N    | Open selected entry in a vertical split    |
-| `<C-y>`         | N    | Create new file and its parent directories |
-| `<C-z>`         | N    | Mark/Unmark files                          |
-| `<C-o>`         | N    | Open selected files                        |
-
-#### fzf
-
-| Command                 | Mode | Description                               |
-| ----------------------- | ---- | ----------------------------------------- |
-| `<C-n>`/`<C-p>`         | N    | Navigate the result list                  |
-| `<C-x>`                 | N    | Open selected entry in a horizontal split |
-| `<C-v>`                 | N    | Open selected entry in a vertical split   |
-| `Tab`                   | N    | Mark/Unmark files                         |
-| `help fzf-vim-commands` | Ex   | Show all available commands               |
-
-#### fugitive
-
-| Command     | Mode | Description                                                |
-| ----------- | ---- | ---------------------------------------------------------- |
-| `Git {cmd}` | Ex   | Run a git command                                          |
-| `G`         | Ex   | Show the working tree status                               |
-| `Gdiff`     | Ex   | Show changes between commits                               |
-| `Gcommit`   | Ex   | Commit changes                                             |
-| `Gmerge`    | Ex   | Merge two branches                                         |
-| `Grebase`   | Ex   | Rebase changes                                             |
-| `Gfetch`    | Ex   | Fetch changes                                              |
-| `Gpull`     | Ex   | Pull changes                                               |
-| `Gpush`     | Ex   | Push changes                                               |
-| `Glog`      | Ex   | Load the commit history into the quickfix list             |
-| `Gedit`     | Ex   | View a blob, tree, commit, or tag in the repository        |
-| `Gmove`     | Ex   | Move the file and rename the buffer                        |
-| `Grename`   | Ex   | Rename the file and the buffer                             |
-| `Gdelete`   | Ex   | Delete the file and the buffer                             |
-| `Gblame`    | Ex   | Show what revision and author modified each line of a file |
-| `-`         | N    | Stage or unstage the file                                  |
-| `X`         | N    | Discard the changes                                        |
-| `=`         | N    | Toggle an inline diff                                      |
-| `dd`        | N    | Perform a git diff                                         |
-| `o`         | N    | Open the file in a new split                               |
-| `cc`        | N    | Create a commit                                            |
-| `ri`        | N    | Perform an interactive rebase                              |
-| `gq`        | N    | Close the status buffer                                    |
-| `g?`        | N    | Open help                                                  |
-
-#### vim-surround
-
-| Command | Mode | Description                       |
-| ------- | ---- | --------------------------------- |
-| `ys`    | N    | Add surroundings                  |
-| `yss`   | N    | Wrap the entire line              |
-| `cs`    | N    | Change surroundings               |
-| `ds`    | N    | Delete surroundings               |
-| `S`     | V    | Wrap the selection                |
-| `<C-s>` | I    | Insert the specified surroundings |
-
-#### vimtex
-
-| Command      | Mode | Description                                |
-| ------------ | ---- | ------------------------------------------ |
-| `<leader>ll` | N    | Compile project                            |
-| `<leader>lk` | N    | Stop compilation                           |
-| `<leader>le` | N    | Show errors and warnings                   |
-| `<leader>lt` | N    | Toggle table of contents                   |
-| `<leader>lv` | N    | Perform forward search                     |
-| `<leader>li` | N    | Show information about the current project |
-| `<leader>lc` | N    | Clean auxiliary files                      |
-| `<leader>lC` | N    | Clean auxiliary files and output files     |

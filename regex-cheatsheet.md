@@ -1,6 +1,7 @@
 # REGEX cheatsheet
 
-From [regexone.com](https://regexone.com/) and [regexr.com](https://regexr.com/).
+From [regexone.com](https://regexone.com/) and
+[regexr.com](https://regexr.com/).
 
 
 ## Contents
