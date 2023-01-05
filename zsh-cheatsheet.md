@@ -25,7 +25,7 @@ See `man zshzle`.
 | Binding           | Description |
 | ----------------- | ----------- |
 | <kbd>ctrl-h</kbd> | Delete the character behind the cursor. |
-| <kbd>ctrl-b</kbd> | Delete the character under the cursor. |
+| <kbd>ctrl-d</kbd> | Delete the character under the cursor. |
 | <kbd>ctrl-w</kbd> | Kill the word behind the cursor. |
 | <kbd>ctrl-k</kbd> | Kill from the cursor to the end of the line. |
 | <kbd>ctrl-u</kbd> | Kill the current line. |

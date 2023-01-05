@@ -6,3 +6,4 @@ This repository contains cheatsheets for:
 * Regular expressions
 * Tmux
 * Vim
+* Zsh
